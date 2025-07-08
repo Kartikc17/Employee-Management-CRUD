@@ -1,5 +1,7 @@
 package App_crud.employee.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -64,5 +66,12 @@ public class EmployeeController {
 	 
 	  return "index";
   }
+  
+  @GetMapping("/allemployees")
+  public String fetchAllEmployees(Model m) {
+       List<Employee> empList = service.fetchAllEmployees();
+        m.addAttribute("empList", empList);
+        return "show_all_employees";
+	}
  
 }

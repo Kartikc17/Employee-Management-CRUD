@@ -12,6 +12,6 @@ public interface EmployeeService {
 	Employee searchEmployee(int id);
 	void deleteEmployee(int id);
 	
-	List<Employee> fetchAllEmployee();
+	List<Employee> fetchAllEmployees();
 	
 }

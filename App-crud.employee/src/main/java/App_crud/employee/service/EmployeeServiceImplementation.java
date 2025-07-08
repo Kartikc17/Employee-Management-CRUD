@@ -33,7 +33,7 @@ public class EmployeeServiceImplementation implements EmployeeService{
 	}
 
 	@Override
-	public List<Employee> fetchAllEmployee() {
+	public List<Employee> fetchAllEmployees() {
 
 		return repo.findAll();
 	}
